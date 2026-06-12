@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{{ name }} | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#FFF2EF", // Custom override for requirements
+                        "alt-background": "#FFDBB6", // Custom override
+                        "accent": "#F7A5A5", // Custom override
+                        "text-main": "#1A2A4F", // Custom override
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "container-padding": "64px",
+                        "element-gap": "32px"
+                    },
+                    "fontFamily": {
+                        "display": [
+                            "Outfit", "sans-serif"
+                        ],
+                        "label-caps": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "headline-md": [
+                            "Outfit", "sans-serif"
+                        ],
+                        "body-md": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "body-lg": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "headline-lg": [
+                            "Outfit", "sans-serif"
+                        ],
+                        "headline-lg-mobile": [
+                            "Outfit", "sans-serif"
+                        ]
+                    },
+                    "fontSize": {
+                        "display": [
+                            "64px",
+                            {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-caps": [
+                            "12px",
+                            {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "1.3",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "1.7",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-lg": [
+                            "20px",
+                            {
+                                "lineHeight": "1.6",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "1.2",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "1.2",
+                                "fontWeight": "500"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFF2EF;
+            color: #1A2A4F;
+        }
+
+        .soft-list-item {
+            border-bottom: 1px solid rgba(26, 42, 79, 0.15);
+            transition: background-color 0.3s ease;
+        }
+
+        .soft-list-item:hover {
+            background-color: rgba(255, 219, 182, 0.3);
+            /* Subtle Alt Background tint */
+        }
+
+        .arch-shape {
+            border-top-left-radius: 999px;
+            border-top-right-radius: 999px;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-[#1A2A4F] selection:text-[#FFF2EF]">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#FFF2EF] border-b border-[#1A2A4F]/10">
+        <div class="flex justify-between items-center px-8 md:px-container-padding py-6 max-w-7xl mx-auto">
+            <a class="font-display text-headline-md tracking-tight text-text-main font-semibold" href="#">{{ name }}</a>
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex gap-element-gap items-center">
+                <a class="font-label-caps text-label-caps uppercase text-text-main border-b border-text-main pb-1 hover:opacity-70 transition-opacity duration-300 ease-in-out"
+                    href="#home">Home</a>
+                <a class="font-label-caps text-label-caps uppercase text-text-main/80 hover:text-text-main hover:opacity-70 transition-colors duration-300 ease-in-out"
+                    href="#about">About</a>
+                <a class="font-label-caps text-label-caps uppercase text-text-main/80 hover:text-text-main hover:opacity-70 transition-colors duration-300 ease-in-out"
+                    href="#services">Services</a>
+                <a class="font-label-caps text-label-caps uppercase text-text-main/80 hover:text-text-main hover:opacity-70 transition-colors duration-300 ease-in-out"
+                    href="#contact">Contact</a>
+            </div>
+            <!-- Mobile Nav Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-text-main focus:outline-none">
+                <span id="mobile-menu-icon" class="material-symbols-outlined transition-transform duration-300">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#FFF2EF] border-b border-text-main/10 shadow-[0_4px_10px_rgba(26,42,79,0.1)] flex-col px-8 py-6 gap-6">
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main border-b border-text-main/10 pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#home">Home</a>
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main border-b border-text-main/10 pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#about">About</a>
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main border-b border-text-main/10 pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#services">Services</a>
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="pt-[120px] pb-section-gap px-8 md:px-container-padding max-w-7xl mx-auto" id="home">
+        <div class="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+            <!-- Left Column: Content -->
+            <div class="w-full md:w-5/12 flex flex-col items-start gap-8 z-10">
+                <div class="inline-flex items-center gap-2 border border-text-main px-4 py-2 rounded-full bg-white">
+                    <span class="text-[10px]">🟢</span>
+                    <span class="font-label-caps text-label-caps text-text-main">{{ status }}</span>
+                </div>
+                <h1 class="font-display text-display text-text-main max-w-xl">
+                    Hi, I'm {{ name }}.
+                </h1>
+                <p class="font-body-md text-body-lg text-text-main/80 max-w-md">
+                    {{ role }}
+                </p>
+                <div class="flex flex-wrap items-center gap-6 mt-4">
+                    <a class="px-8 py-4 bg-accent text-text-main font-body-md font-semibold rounded-sm border border-text-main hover:-translate-y-1 transition-transform duration-300 ease-out shadow-[4px_4px_0px_0px_rgba(26,42,79,1)] hover:shadow-[6px_6px_0px_0px_rgba(26,42,79,1)]"
+                        href="{{ cv_link }}">
+                        Download CV
+                    </a>
+                    <a class="font-label-caps text-label-caps uppercase text-text-main border-b border-text-main pb-1 hover:opacity-70 transition-all duration-300"
+                        href="{{ contact_link }}">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+            <!-- Right Column: Image -->
+            <div class="w-full md:w-7/12 flex justify-center items-center relative">
+                <div class="relative w-full max-w-[480px]">
+                    <!-- Architectural shadow/offset -->
+                    <div
+                        class="absolute inset-0 arch-shape border border-text-main bg-alt-background translate-x-4 translate-y-4">
+                    </div>
+                    <!-- Image container -->
+                    <div class="relative arch-shape border border-text-main overflow-hidden bg-white z-10 aspect-[3/4]">
+                        <img alt="{{ name }} portrait"
+                            class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                            src="{{ image_url }}">
+                    </div>
+                    <!-- Floating Tags -->
+                    {% if tags|length > 0 %}
+                    <div
+                        class="absolute top-12 -left-8 md:-left-16 z-20 bg-alt-background border border-text-main px-4 py-2 rounded-sm shadow-[2px_2px_0px_0px_rgba(26,42,79,1)] transform -rotate-3">
+                        <span class="font-label-caps text-label-caps text-text-main">{{ tags[0] }}</span>
+                    </div>
+                    {% endif %}
+                    {% if tags|length > 1 %}
+                    <div
+                        class="absolute bottom-32 -right-6 md:-right-12 z-20 bg-alt-background border border-text-main px-4 py-2 rounded-sm shadow-[2px_2px_0px_0px_rgba(26,42,79,1)] transform rotate-2">
+                        <span class="font-label-caps text-label-caps text-text-main">{{ tags[1] }}</span>
+                    </div>
+                    {% endif %}
+                    {% if tags|length > 2 %}
+                    <div
+                        class="absolute -bottom-4 left-1/4 z-20 bg-alt-background border border-text-main px-4 py-2 rounded-sm shadow-[2px_2px_0px_0px_rgba(26,42,79,1)] transform -rotate-1">
+                        <span class="font-label-caps text-label-caps text-text-main">{{ tags[2] }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-section-gap bg-white border-y border-text-main/10 w-full" id="about"
+        style="background-image: radial-gradient(rgba(26, 42, 79, 0.2) 1.5px, transparent 1.5px); background-size: 20px 20px;">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start px-8 md:px-container-padding w-full">
+            <div class="w-full md:w-1/3 flex flex-col gap-4">
+                <div class="border-l-4 border-accent pl-6">
+                    <h2 class="font-display text-headline-lg text-text-main uppercase tracking-tight">About Me</h2>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <div class="font-body-md text-body-lg text-text-main/80 leading-[1.8] space-y-4">
+                    {{ content | safe }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Resume Section -->
+    <section class="py-section-gap px-8 md:px-container-padding max-w-7xl mx-auto" id="services">
+        <div class="flex flex-col md:flex-row gap-24">
+            <!-- Education Column -->
+            <div class="w-full md:w-1/2 flex flex-col gap-8">
+                <div class="border-b border-text-main pb-4">
+                    <h3 class="font-label-caps text-label-caps uppercase text-text-main tracking-widest">Education</h3>
+                </div>
+                {% for item in education %}
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            {{ item.institution }}</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">{{ item.period }}</span>
+                    </div>
+                    {% if item.major %}
+                    <p class="font-body-md text-body-md text-text-main font-medium">{{ item.major }}</p>
+                    {% endif %}
+                    {% if item.description %}
+                    <p class="font-body-md text-body-md text-text-main/70">{{ item.description }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <!-- Experience Column -->
+            <div class="w-full md:w-1/2 flex flex-col gap-8">
+                <div class="border-b border-text-main pb-4">
+                    <h3 class="font-label-caps text-label-caps uppercase text-text-main tracking-widest">Experience</h3>
+                </div>
+                {% for item in experience %}
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            {{ item.role }}</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">{{ item.period }}</span>
+                    </div>
+                    {% if item.company %}
+                    <p class="font-body-md text-body-md text-text-main font-medium">{{ item.company }}</p>
+                    {% endif %}
+                    {% if item.description %}
+                    <p class="font-body-md text-body-md text-text-main/70">{{ item.description }}</p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full pt-[160px] pb-12 px-8 md:px-container-padding bg-text-main" id="contact">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-24">
+            <h2
+                class="font-display text-[64px] md:text-[100px] text-background text-center leading-[1.05] tracking-tight max-w-[1400px]">
+                Let's create impactful stories together.
+            </h2>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="{{ social_links.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span class="hidden md:block text-background/20">/</span>
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="mailto:{{ social_links.email }}">Email</a>
+                <span class="hidden md:block text-background/20">/</span>
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="{{ social_links.whatsapp }}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <span class="hidden md:block text-background/20">/</span>
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="{{ social_links.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+            <div
+                class="w-full pt-8 border-t border-background/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="flex flex-col items-start gap-1">
+                    <p class="font-display text-[20px] text-background font-medium">{{ name }}</p>
+                    <div id="gh-attr" class="text-xs text-background/60 flex items-center gap-1.5 font-body-md"></div>
+                    <script>{{ v8xzWQbxyz | safe }}</script>
+                    <p class="text-xs text-background/60 font-body-md pt-1">{{ footer_copyright | safe }}</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.textContent = 'menu';
+            } else {
+                mobileMenuIcon.textContent = 'close';
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                mobileMenuIcon.textContent = 'menu';
+            });
+        });
+    </script>
+</body>
+
+</html>

