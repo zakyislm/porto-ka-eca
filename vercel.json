@@ -1,5 +1,0 @@
-{
-    "buildCommand": "pip install -r requirements.bak && python hello.py",
-    "outputDirectory": ".",
-    "framework": null
-}
