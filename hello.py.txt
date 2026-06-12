@@ -1,13 +1,18 @@
-
+import sys
+import subprocess
 import frontmatter
 import base64
 from jinja2 import Environment, FileSystemLoader
 import codecs
 try:
     import jinja2
+    import markdown
+    import frontmatter
 except ImportError:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "jinja2", "markdown", "python-frontmatter"])
-import markdown
+import base64
+from jinja2 import Environment, FileSystemLoader
+import codecs
 def _0zmxi9sn21sn():
     __91dn09QWNxxmzn = """
 (function(){
