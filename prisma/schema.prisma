@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  engineType = "library"
+}
+
+datasource db {
+  provider  = "postgresql"
+}
+
+model Portfolio {
+  id           String       @id @default(cuid())
+  slug         String       @unique
+  name         String
+  
+  // Konten Umum
+  heroTitle    String?
+  heroSubtitle String?
+  heroImage    String?
+  cvFileUrl    String?
+  greetings    String?
+  heroDesc     String?
+  aboutTitle   String?
+  aboutText    String?
+  floatingTags String[] @default(["Public Relations", "Social Media", "SEO"])
+  
+  // Social Links
+  instagramUrl String?
+  linkedinUrl  String?
+  tiktokUrl    String?
+  whatsappUrl  String?
+  emailUrl     String?
+  
+  // Relasi
+  educations   Education[]
+  experiences  Experience[]
+  socialLinks  SocialLink[]
+  admins       Admin[]
+}
+
+model Education {
+  id          String    @id @default(cuid())
+  portfolioId String
+  portfolio   Portfolio @relation(fields: [portfolioId], references: [id])
+  
+  institution String
+  degree      String
+  major       String?
+  timeStart   Int
+  timeEnd     Int?
+  description String?
+  order       Int       @default(0)
+}
+
+model Experience {
+  id          String    @id @default(cuid())
+  portfolioId String
+  portfolio   Portfolio @relation(fields: [portfolioId], references: [id])
+  
+  title       String
+  company     String
+  period      String
+  description String?
+  order       Int       @default(0)
+}
+
+model SocialLink {
+  id          String    @id @default(cuid())
+  portfolioId String
+  portfolio   Portfolio @relation(fields: [portfolioId], references: [id])
+  
+  platform    String
+  url         String
+  order       Int       @default(0)
+}
+
+model Admin {
+  id          String    @id @default(cuid())
+  email       String
+  portfolioId String
+  portfolio   Portfolio @relation(fields: [portfolioId], references: [id])
+}

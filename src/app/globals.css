@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-outfit);
+  --font-headline-md: var(--font-outfit);
+  --font-headline-lg: var(--font-outfit);
+  --font-label-caps: var(--font-plus-jakarta-sans);
+  --font-body-md: var(--font-plus-jakarta-sans);
+}
+
+body {
+  background-color: #FFF2EF;
+  color: #1A2A4F;
+}
