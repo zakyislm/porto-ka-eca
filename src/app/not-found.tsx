@@ -24,7 +24,7 @@ export default async function NotFound() {
 
   return (
     <>
-      <Navbar name={portfolio.name} />
+      <Navbar name={portfolio?.name || "Resha Eka Aulia"} />
       <main className="min-h-[70vh] flex flex-col items-center justify-center bg-white bg-[radial-gradient(#1A2A4F33_1px,transparent_1px)] [background-size:24px_24px] px-8 text-center pt-[100px]">
         <h1 className="font-display text-[100px] md:text-[150px] text-[#1A2A4F] leading-none mb-2">404</h1>
         <h2 className="font-display text-3xl md:text-4xl text-[#1A2A4F] mb-6">Page Not Found</h2>
@@ -39,10 +39,10 @@ export default async function NotFound() {
         </Link>
       </main>
       <Footer 
-        instagramUrl={portfolio.instagramUrl}
-        linkedinUrl={portfolio.linkedinUrl}
-        whatsappUrl={portfolio.whatsappUrl}
-        emailUrl={portfolio.emailUrl}
+        instagramUrl={portfolio?.instagramUrl || "https://www.instagram.com"}
+        linkedinUrl={portfolio?.linkedinUrl || "https://www.linkedin.com"}
+        whatsappUrl={portfolio?.whatsappUrl || "https://wa.me"}
+        emailUrl={portfolio?.emailUrl || "mailto:reshaekaauliaa@gmail.com"}
       />
     </>
   );
