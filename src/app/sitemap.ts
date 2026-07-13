@@ -20,12 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const slug = process.env.PORTFOLIO_SLUG || "resha";
     const portfolio = await prisma.portfolio.findUnique({
       where: { slug },
-      select: { updatedAt: true }
+      select: { id: true }
     });
 
     if (portfolio) {
-      // Update the lastModified date to whenever the content was last updated in the DB!
-      routes[0].lastModified = portfolio.updatedAt;
+      // Just keep the lastModified as new Date()
+      routes[0].lastModified = new Date();
     }
   } catch (error) {
     console.error("Error generating sitemap", error);
