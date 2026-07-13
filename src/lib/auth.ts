@@ -27,7 +27,7 @@ export const authOptions: NextAuthOptions = {
 
       if (!portfolio) return "/";
       
-      const isAllowed = portfolio.admins.some(admin => admin.email === user.email);
+      const isAllowed = portfolio.admins.some((admin: any) => admin.email === user.email);
       return isAllowed ? true : "/";
     },
   },
