@@ -49,29 +49,29 @@ export default async function Home() {
 
   return (
     <>
-      <Navbar name={portfolio.name} />
+      <Navbar name={portfolio!.name} />
       <main>
         <Hero 
-          title={portfolio.greetings || portfolio.heroTitle || ""} 
-          subtitle={portfolio.heroDesc || portfolio.heroSubtitle || ""} 
-          imageUrl={portfolio.heroImage || ""} 
-          cvFileUrl={portfolio.cvFileUrl || ""}
-          floatingTags={portfolio.floatingTags}
+          title={portfolio!.greetings || portfolio!.heroTitle || ""} 
+          subtitle={portfolio!.heroDesc || portfolio!.heroSubtitle || ""} 
+          imageUrl={portfolio!.heroImage || ""} 
+          cvFileUrl={portfolio!.cvFileUrl || ""}
+          floatingTags={portfolio!.floatingTags}
         />
         <About 
-          title={portfolio.aboutTitle || "ABOUT ME"}
-          text={portfolio.aboutText || ""} 
+          title={portfolio!.aboutTitle || "ABOUT ME"}
+          text={portfolio!.aboutText || ""} 
         />
         <Experience 
-          educations={portfolio.educations} 
-          experiences={portfolio.experiences} 
+          educations={portfolio!.educations} 
+          experiences={portfolio!.experiences} 
         />
       </main>
       <Footer 
-        instagramUrl={portfolio.instagramUrl}
-        linkedinUrl={portfolio.linkedinUrl}
-        whatsappUrl={portfolio.whatsappUrl}
-        emailUrl={portfolio.emailUrl}
+        instagramUrl={portfolio!.instagramUrl}
+        linkedinUrl={portfolio!.linkedinUrl}
+        whatsappUrl={portfolio!.whatsappUrl}
+        emailUrl={portfolio!.emailUrl}
       />
     </>
   );
