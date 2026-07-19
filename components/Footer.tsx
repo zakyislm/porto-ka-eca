@@ -70,7 +70,7 @@ export default function Footer({ instagramUrl, linkedinUrl, whatsappUrl, emailUr
             <p className="font-display text-[20px] text-[#FFF2EF] font-medium">Resha Eka Aulia</p>
             <div className="text-xs text-[#FFF2EF]/60 flex items-center gap-1.5 font-body-md mt-2">
               <Link
-                href="https://github.com/zakyislm"
+                href="https://zakyislm.github.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 hover:text-white transition-colors"
@@ -81,7 +81,7 @@ export default function Footer({ instagramUrl, linkedinUrl, whatsappUrl, emailUr
             </div>
             <div className="flex items-center gap-2 pt-1">
               <p className="text-xs text-[#FFF2EF]/60 font-body-md">
-                Copyright &copy; Resha Eka Aulia{new Date().getFullYear()}
+                Copyright &copy; Resha Eka Aulia {new Date().getFullYear()}
               </p>
             </div>
           </div>

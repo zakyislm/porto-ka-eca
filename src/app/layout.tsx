@@ -17,6 +17,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Resha Eka Aulia | Portfolio",
   description: "Communication professional bridging creative storytelling and strategic marketing.",
+  authors: [{ name: "zakyislm", url: "https://zakyislm.github.io" }],
   verification: {
     google: "LXBNqAzezUC27mP2CsHXL1LdKPp2u9ra6Zyk4vR0u68",
   },
